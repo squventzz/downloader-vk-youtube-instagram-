@@ -98,8 +98,4 @@ docker compose up -d
 docker compose logs -f
 ```
 
----
 
-## Лицензия
-
-MIT License
