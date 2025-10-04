@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  downloaderpet:
+    build: .
+    container_name: downloaderpet_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./downloads:/app/downloads
+    environment:
+      - TZ=Europe/Moscow
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
